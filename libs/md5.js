@@ -265,7 +265,5 @@
             return raw_hmac_md5(key, string);
         }
     };
-    
+    module.exports = md5;
 }());
-
-module.exports = md5;
