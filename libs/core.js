@@ -1,9 +1,11 @@
 Tagtoo = (typeof Tagtoo === 'undefined') ? {} : Tagtoo;
 
+md5 = require('./md5.js');
 set = require('./set.js');
 url = require('url');
 
 Tagtoo.Core = {
+    md5: md5,
     url: url,
     format: function(format) {
         var args = Array.prototype.slice.call(arguments, 1);
