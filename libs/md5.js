@@ -251,7 +251,7 @@
         return rstr2hex(raw_hmac_md5(k, d));
     }
     
-    md5 = function (string, key, raw) {
+    function md5(string, key, raw) {
         if (!key) {
             if (!raw) {
                 return hex_md5(string);
@@ -268,4 +268,4 @@
     
 }());
 
-module.exports = dm5;
+module.exports = md5;
