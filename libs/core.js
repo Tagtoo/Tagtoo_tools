@@ -1,8 +1,8 @@
 Tagtoo = (typeof Tagtoo === 'undefined') ? {} : Tagtoo;
 
-md5 = require('./md5.js');
-set = require('./set.js');
-url = require('url');
+var md5 = require('./md5.js');
+var set = require('./set.js');
+var url = require('url');
 
 Tagtoo.Core = {
     md5: md5,
