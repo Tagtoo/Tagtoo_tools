@@ -38,7 +38,14 @@ Tagtoo.Core = {
             var vs = parts[i].split('=');
             if (vs.length == 2) {
                 var key = decodeURIComponent(vs[0]);
-                var value = decodeURIComponent(vs[1]);
+                try {
+                    var value = decodeURIComponent(vs[1]);
+                } catch(e) {
+                    if (e.name === 'URIError')
+                        var value = unescape(vs[1]);
+                    else
+                        throw e;
+                }
                 data[key] = value;
             }
         }
